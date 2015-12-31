@@ -60,9 +60,10 @@ class FlexibleDropdownField extends DropdownField
             'tabindex' => $this->getTabIndex()
         ), $this->extraAttributes);
 
-        if($this->disabled) $attributes['disabled'] = 'disabled';
+        if ($this->disabled) {
+            $attributes['disabled'] = 'disabled';
+        }
 
         return $this->createTag('select', $attributes, $options);
     }
-
 }

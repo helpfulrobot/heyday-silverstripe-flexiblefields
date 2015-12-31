@@ -41,10 +41,11 @@ class FlexibleTextareaField extends TextareaField
                 'cols' => $this->cols
             ), $this->extraAttributes);
 
-            if($this->disabled) $attributes['disabled'] = 'disabled';
+            if ($this->disabled) {
+                $attributes['disabled'] = 'disabled';
+            }
 
             return $this->createTag('textarea', $attributes, htmlentities($this->value, ENT_COMPAT, 'UTF-8'));
         }
     }
-
 }
